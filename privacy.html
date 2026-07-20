@@ -6,13 +6,15 @@
 <title>Privacy Policy | Oto</title>
 <meta name="description" content="Oto's privacy policy: no tracking, no location, no surveillance. Everything family sees is something she chose to send.">
 <link rel="canonical" href="https://otoshiyori.health/privacy.html">
+<link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#0e0e10">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
 <style>
-  :root{--bg:#0e0e10; --bg-soft:#161618; --line:#232327; --line2:#2a2a2e; --text:#f0f0f2; --text-dim:#9a9aa0; --text-faint:#7e7e86; --green:#4ade80; --r:2px}
+  :root{--bg:#0e0e10; --bg-soft:#161618; --card:#151518; --line:#232327; --line2:#2a2a2e; --text:#f0f0f2; --text-dim:#9a9aa0; --text-faint:#7e7e86; --green:#4ade80; --r:2px}
   *{margin:0;padding:0;box-sizing:border-box}
   body{background:var(--bg);color:var(--text);font-family:'Outfit',system-ui,sans-serif}
   a{color:inherit;text-decoration:none}
@@ -22,14 +24,33 @@
   .brand{font-weight:900;font-size:17px;letter-spacing:3px}.brand b{color:var(--green)}
   .nav-r{display:flex;gap:26px;align-items:center}
   .nav-r a{font-size:12px;color:var(--text-dim);letter-spacing:1.2px;text-transform:uppercase;font-weight:600}
-  main{max-width:760px;margin:0 auto;padding:72px 24px 96px}
   .eyebrow{font-size:11px;font-weight:700;letter-spacing:2.4px;color:var(--text-faint);text-transform:uppercase}
-  h1{font-size:clamp(30px,5vw,48px);font-weight:900;letter-spacing:-.6px;text-transform:uppercase;margin:14px 0 8px}
-  .updated{color:var(--text-faint);font-size:12px;letter-spacing:1px;text-transform:uppercase}
-  h2{font-size:17px;font-weight:800;letter-spacing:.5px;text-transform:uppercase;margin:38px 0 10px}
-  p,li{color:var(--text-dim);font-size:15px;line-height:1.75;font-weight:300}
-  ul{padding-left:20px;margin-top:8px}
-  main a{color:var(--green)}
+
+  /* legal pages — house format (legal-head + plain-terms summary + numbered sections) */
+  .legal-head{padding:clamp(48px,7vw,84px) 0 clamp(28px,4vw,40px); border-bottom:1px solid var(--line)}
+  .legal-head .eyebrow{display:block; margin-bottom:16px}
+  .legal-head h1{font-size:clamp(34px,5.5vw,60px); font-weight:900; letter-spacing:-0.6px; text-transform:uppercase}
+  .legal-head .meta{margin-top:16px; font-size:12px; font-weight:600; letter-spacing:1px; color:var(--text-faint); text-transform:uppercase}
+  .legal{max-width:760px; margin:0 auto; padding:clamp(40px,6vw,64px) 0 80px}
+  .legal .lede{font-size:17px; color:var(--text); font-weight:300; line-height:1.6}
+  .legal .lede b{font-weight:700}
+  .legal .summary{margin:26px 0 8px; padding:22px 24px; background:var(--bg-soft); border:1px solid var(--line); border-radius:var(--r)}
+  .legal .summary .st{text-transform:uppercase; letter-spacing:2.4px; font-size:11px; font-weight:700; color:var(--text-faint); margin-bottom:14px}
+  .legal .summary ul{list-style:none; margin:0; padding:0; display:flex; flex-direction:column; gap:11px}
+  .legal .summary li{display:flex; gap:12px; align-items:flex-start; font-size:15px; color:var(--text-dim); font-weight:300}
+  .legal .summary li b{color:var(--text); font-weight:700}
+  .legal .summary .tick{flex:0 0 auto; width:20px; height:20px; border-radius:var(--r); background:rgba(255,255,255,.06); border:1px solid var(--line); display:grid; place-items:center; margin-top:1px}
+  .legal .summary .tick svg{width:11px; height:11px; stroke:var(--green); fill:none; stroke-width:2.4; stroke-linecap:round; stroke-linejoin:round}
+  .legal h2{text-transform:uppercase; letter-spacing:.5px; font-size:14px; font-weight:800; color:var(--text); margin:40px 0 14px; padding-top:24px; border-top:1px solid var(--line); display:flex; gap:12px; align-items:baseline}
+  .legal h2 .n{font-size:11px; color:var(--text-faint); font-weight:700; letter-spacing:1.2px; font-variant-numeric:tabular-nums}
+  .legal p{font-size:15px; color:var(--text-dim); line-height:1.72; margin-bottom:14px; font-weight:300}
+  .legal p b, .legal li b{color:var(--text); font-weight:700}
+  .legal ul.body-list{margin:0 0 14px; padding-left:0; list-style:none; display:flex; flex-direction:column; gap:10px}
+  .legal ul.body-list li{font-size:15px; color:var(--text-dim); line-height:1.65; padding-left:18px; position:relative; font-weight:300}
+  .legal ul.body-list li::before{content:""; position:absolute; left:2px; top:9px; width:5px; height:5px; border-radius:50%; background:var(--text-faint)}
+  .legal a.link{color:var(--text); font-weight:600; text-decoration:underline; text-underline-offset:2px; text-decoration-color:var(--line2)}
+  .legal a.link:hover{text-decoration-color:var(--text-dim)}
+
   footer{border-top:1px solid var(--line);padding:56px 0 40px}
   .foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1fr;gap:32px}
   .foot-brand .brand{font-size:16px;display:inline-block;margin-bottom:12px}
@@ -51,35 +72,57 @@
   </div>
 </div></nav>
 
-<main>
-  <div class="eyebrow">Legal</div>
-  <h1>Privacy Policy</h1>
-  <p class="updated">Last updated: July 16, 2026 · Applies to the Oto app and otoshiyori.health</p>
+<header class="legal-head">
+  <div class="wrap">
+    <span class="eyebrow">Legal</span>
+    <h1>Privacy Policy</h1>
+    <div class="meta">Effective date: <time datetime="2026-07-16">July 16, 2026</time> · Applies to the Oto app and otoshiyori.health</div>
+  </div>
+</header>
 
-  <h2>The short version</h2>
-  <p>Oto is built on one rule: <strong style="color:var(--text)">she initiates, family receives.</strong> The app does not track its user. There is no GPS or location collection, no activity monitoring, no camera or microphone surveillance, and no advertising. Everything a family member sees is something the user chose to send.</p>
+<main class="wrap">
+  <div class="legal">
 
-  <h2>What Oto stores</h2>
-  <ul>
-    <li>Her contacts (names, photos, phone numbers), her schedule, and her preferences — stored on the device.</li>
-    <li>Check-ins ("I'm okay today") and help requests — delivered to the family members she or her family added during setup, then kept only as recent history.</li>
-  </ul>
+    <p class="lede">Oto (the "app") is built and published by Ubersoft ("we," "us," "our") on one rule: <b>she initiates, family receives.</b> The app does not track its user — no location, no monitoring, no surveillance. Everything a family member sees is something she chose to send.</p>
 
-  <h2>What Oto never collects</h2>
-  <ul>
-    <li>Location, movement, or GPS data of any kind.</li>
-    <li>Ambient audio, video, photos, or screen activity.</li>
-    <li>Usage analytics tied to her identity, advertising identifiers, or any data sold or shared with third parties.</li>
-  </ul>
+    <div class="summary">
+      <div class="st">In plain terms</div>
+      <ul>
+        <li><span class="tick"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span><span><b>No tracking.</b> No GPS, no location, no movement data, no activity monitoring.</span></li>
+        <li><span class="tick"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span><span><b>No surveillance.</b> No ambient audio, video, photos, or screen activity — ever.</span></li>
+        <li><span class="tick"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span><span><b>She chooses what's shared.</b> Check-ins and help requests go only to the family she approved.</span></li>
+        <li><span class="tick"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span><span><b>No ads, nothing sold.</b> No advertising identifiers, no analytics tied to her, no data sold or shared.</span></li>
+      </ul>
+    </div>
 
-  <h2>Calls</h2>
-  <p>Calls placed from Oto go through the phone's own dialer or calling apps. Oto does not record, route, or listen to calls.</p>
+    <h2><span class="n">01</span> What Oto stores on the device</h2>
+    <ul class="body-list">
+      <li>Her contacts (names, photos, phone numbers), her schedule, and her preferences — stored on the device.</li>
+    </ul>
 
-  <h2>This website</h2>
-  <p>otoshiyori.health uses privacy-friendly, cookieless page counting (GoatCounter) to see how many people visit. No personal profiles, no cross-site tracking, no ads.</p>
+    <h2><span class="n">02</span> Check-ins and help requests — the one thing that leaves</h2>
+    <p>Check-ins ("I'm okay today") and help requests are the only information that leaves the device. They are delivered <b>only</b> to the family members she or her family added during setup, and are kept only as recent history. Nothing is sent that she didn't choose to send.</p>
 
-  <h2>Changes and contact</h2>
-  <p>Oto is in active development; this policy will be updated as the app takes final shape, and material changes will be noted here. Questions: <a href="mailto:support@ubersoft.pro">support@ubersoft.pro</a>.</p>
+    <h2><span class="n">03</span> What Oto never collects</h2>
+    <ul class="body-list">
+      <li>Location, movement, or GPS data of any kind.</li>
+      <li>Ambient audio, video, photos, or screen activity.</li>
+      <li>Usage analytics tied to her identity, advertising identifiers, or any data sold or shared with third parties.</li>
+    </ul>
+
+    <h2><span class="n">04</span> Calls</h2>
+    <p>Calls placed from Oto go through the phone's own dialer or calling apps. Oto does not record, route, or listen to calls.</p>
+
+    <h2><span class="n">05</span> This website</h2>
+    <p>otoshiyori.health uses privacy-friendly, cookieless page counting (GoatCounter) to see how many people visit. No personal profiles, no cross-site tracking, no ads.</p>
+
+    <h2><span class="n">06</span> Changes to this policy</h2>
+    <p>Oto is in active development; this policy will be updated as the app takes final shape, and material changes will be noted here with a new effective date.</p>
+
+    <h2><span class="n">07</span> Contact</h2>
+    <p>Questions about privacy? Reach us at <a class="link" href="mailto:support@ubersoft.pro">support@ubersoft.pro</a>.</p>
+
+  </div>
 </main>
 
 <footer><div class="wrap">
@@ -109,7 +152,7 @@
     Google Play and the Google Play logo are trademarks of Google LLC.<br>© <span id="cpyear">2026</span> <a href="https://ubersoft.pro" target="_blank" rel="noopener">Ubersoft</a>. All rights reserved.
   </p>
 </div></footer>
-<script>document.getElementById('cpyear').textContent = new Date().getFullYear();</script>
+<script>(function(){var el=document.getElementById('cpyear');if(el){var s=2026,n=new Date().getFullYear();el.textContent=(n>s)?(s+'–'+n):(''+s);}})();</script>
 <script data-goatcounter="https://otoshiyori.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
