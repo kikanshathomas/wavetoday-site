@@ -25,11 +25,21 @@
   a.btn{display:inline-block; margin-top:30px; background:var(--text); color:var(--bg); text-decoration:none;
         padding:12px 26px; border-radius:var(--r); font-weight:600; font-size:13px; transition:opacity .15s}
   a.btn:hover{opacity:.85}
+
+  /* --- brand lockup: the app's own drawn mark, not the launcher PNG --- */
+  .brand{display:inline-flex;align-items:center;gap:9px;font-weight:900;font-size:17px;letter-spacing:3px}
+  .brand .bmark{width:36px;height:auto;flex:none;display:block}
+  .foot-brand .brand .bmark{width:32px;height:auto}
+  .hero .heromark{width:172px;height:auto;display:block;margin:0 auto 26px}
+  /* --- phone screenshots: warm-black bezel so cream shots read on cream --- */
+  .shotwrap{background:#2a2320;padding:9px;border-radius:30px;display:inline-block;line-height:0;
+    box-shadow:0 26px 60px -26px rgba(42,35,32,.55), 0 2px 0 rgba(255,255,255,.5) inset}
+  .shotimg{width:min(230px,72vw);height:auto;border-radius:22px;border:0;box-shadow:none;display:block}
 </style>
 </head>
 <body>
   <main>
-    <div class="eyebrow">O<b>T</b>O</div>
+    <div class="eyebrow" style="display:flex;align-items:center;justify-content:center;gap:8px"><svg class="" viewBox="84 114 232 162" width="30" height="21" role="img" aria-label="Oto"><circle cx="130" cy="190" r="34" fill="none" stroke="#2a2320" stroke-width="15"/><circle cx="270" cy="190" r="34" fill="none" stroke="#2a2320" stroke-width="15"/><rect x="155" y="120" width="90" height="22" rx="11" fill="#a8432f"/><rect x="189" y="131" width="22" height="139" rx="11" fill="#a8432f"/></svg><span>OTO</span></div>
     <div class="n">404</div>
     <h1>This page isn't on the schedule.</h1>
     <p>It may have moved, or it never existed. Everything else is right where you left it.</p>

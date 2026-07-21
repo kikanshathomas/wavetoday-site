@@ -121,6 +121,16 @@
     .bens{grid-template-columns:1fr}
     .foot-grid{grid-template-columns:1fr 1fr}
   }
+
+  /* --- brand lockup: the app's own drawn mark, not the launcher PNG --- */
+  .brand{display:inline-flex;align-items:center;gap:9px;font-weight:900;font-size:17px;letter-spacing:3px}
+  .brand .bmark{width:36px;height:auto;flex:none;display:block}
+  .foot-brand .brand .bmark{width:32px;height:auto}
+  .hero .heromark{width:172px;height:auto;display:block;margin:0 auto 26px}
+  /* --- phone screenshots: warm-black bezel so cream shots read on cream --- */
+  .shotwrap{background:#2a2320;padding:9px;border-radius:30px;display:inline-block;line-height:0;
+    box-shadow:0 26px 60px -26px rgba(42,35,32,.55), 0 2px 0 rgba(255,255,255,.5) inset}
+  .shotimg{width:min(230px,72vw);height:auto;border-radius:22px;border:0;box-shadow:none;display:block}
 </style>
 </head>
 <body>
@@ -128,7 +138,7 @@
 <div class="announce">IN DEVELOPMENT · COMING TO GOOGLE PLAY · BUILT FOR SOMEONE WE LOVE</div>
 
 <nav><div class="navin">
-  <a class="brand" href="/">O<b>T</b>O</a>
+  <a class="brand" href="/"><svg class="bmark" viewBox="84 114 232 162" width="36" height="25" role="img" aria-label="Oto"><circle cx="130" cy="190" r="34" fill="none" stroke="#2a2320" stroke-width="15"/><circle cx="270" cy="190" r="34" fill="none" stroke="#2a2320" stroke-width="15"/><rect x="155" y="120" width="90" height="22" rx="11" fill="#a8432f"/><rect x="189" y="131" width="22" height="139" rx="11" fill="#a8432f"/></svg><span>OTO</span></a>
   <div class="nav-r">
     <a href="#features">Features</a>
     <a href="#benefits">Why it's different</a>
@@ -138,7 +148,7 @@
 </div></nav>
 
 <header class="hero" id="top"><div class="wrap">
-  <img class="icon" src="/assets/img/app-icon.png" alt="Oto app icon" width="84" height="84">
+  <svg class="heromark" viewBox="84 114 232 162" width="172" height="120" role="img" aria-label="Oto"><circle cx="130" cy="190" r="34" fill="none" stroke="#2a2320" stroke-width="15"/><circle cx="270" cy="190" r="34" fill="none" stroke="#2a2320" stroke-width="15"/><rect x="155" y="120" width="90" height="22" rx="11" fill="#a8432f"/><rect x="189" y="131" width="22" height="139" rx="11" fill="#a8432f"/></svg>
   <div class="eyebrow">Oto · お年寄り</div>
   <h1>Freedom for them. <em>Peace of mind</em> for you.</h1>
   <p class="sub">One calm screen for someone you love in assisted living. They call family with a tap, tell you they're okay, see their day, and can always reach help — on their terms, never under surveillance.</p>
@@ -166,7 +176,7 @@
       <h2>Family is one tap away.</h2>
       <p>No dialer, no contact list to navigate. Tap Daniel's face and it rings Daniel. Photos, never menus — built for older eyes and less steady hands.</p>
     </div>
-    <div class="fphone"><button class="shot-link" type="button" data-full="/assets/img/shot-home.webp" aria-label="Enlarge screenshot: Oto home screen: family call faces, I'm okay button, today's reminders"><img class="shotimg reveal-slide" src="/assets/img/shot-home.png" srcset="/assets/img/shot-home.webp" alt="Oto home screen: family call faces, I'm okay button, today's reminders" loading="lazy" width="460" height="818"></button></div>
+    <div class="fphone"><button class="shot-link" type="button" data-full="/assets/img/shot-home.webp" aria-label="Enlarge screenshot: Oto home screen: family call faces, I'm okay button, today's reminders"><span class="shotwrap"><img class="shotimg reveal-slide" src="/assets/img/shot-home.png" srcset="/assets/img/shot-home.webp" alt="Oto home screen: family call faces, I'm okay button, today's reminders" loading="lazy" width="460" height="818"></span></button></div>
   </div>
 
   <div class="feature flip reveal">
@@ -175,7 +185,7 @@
       <h2>They send it. You breathe.</h2>
       <p>One green tap and the family knows they're fine. They give the reassurance — they aren't tracked into it. That's the whole idea: they initiate, family receives.</p>
     </div>
-    <div class="fphone"><button class="shot-link" type="button" data-full="/assets/img/shot-home-sent.webp" aria-label="Enlarge screenshot: The I'm okay check-in sent — family knows they're fine"><img class="shotimg reveal-slide" src="/assets/img/shot-home-sent.png" srcset="/assets/img/shot-home-sent.webp" alt="The I'm okay check-in sent — family knows they're fine" loading="lazy" width="460" height="818"></button></div>
+    <div class="fphone"><button class="shot-link" type="button" data-full="/assets/img/shot-home-sent.webp" aria-label="Enlarge screenshot: The I'm okay check-in sent — family knows they're fine"><span class="shotwrap"><img class="shotimg reveal-slide" src="/assets/img/shot-home-sent.png" srcset="/assets/img/shot-home-sent.webp" alt="The I'm okay check-in sent — family knows they're fine" loading="lazy" width="460" height="818"></span></button></div>
   </div>
 
   <div class="feature reveal">
@@ -184,7 +194,7 @@
       <h2>Their day, on their terms.</h2>
       <p>Morning pills, tea with Margaret — gentle reminders under their control. Family can add to the day, but never invisibly: anything added is clearly labeled and can always be removed.</p>
     </div>
-    <div class="fphone"><button class="shot-link" type="button" data-full="/assets/img/shot-calling.webp" aria-label="Enlarge screenshot: Calling Daniel — one tap native call"><img class="shotimg reveal-slide" src="/assets/img/shot-calling.png" srcset="/assets/img/shot-calling.webp" alt="Calling Daniel — one tap native call" loading="lazy" width="460" height="818"></button></div>
+    <div class="fphone"><button class="shot-link" type="button" data-full="/assets/img/shot-calling.webp" aria-label="Enlarge screenshot: Calling Daniel — one tap native call"><span class="shotwrap"><img class="shotimg reveal-slide" src="/assets/img/shot-calling.png" srcset="/assets/img/shot-calling.webp" alt="Calling Daniel — one tap native call" loading="lazy" width="460" height="818"></span></button></div>
   </div>
 
   <div class="feature flip reveal">
@@ -193,7 +203,7 @@
       <h2>Help that can't misfire.</h2>
       <p>One clear button reaches a real person. A true emergency call is there too — always behind a calm confirm, so a stray tap never dials an ambulance. Real calls, through the phone's own dialer.</p>
     </div>
-    <div class="fphone"><button class="shot-link" type="button" data-full="/assets/img/shot-emergency.webp" aria-label="Enlarge screenshot: Emergency call confirmation screen — yes, call now, or cancel"><img class="shotimg reveal-slide" src="/assets/img/shot-emergency.png" srcset="/assets/img/shot-emergency.webp" alt="Emergency call confirmation screen — yes, call now, or cancel" loading="lazy" width="460" height="818"></button></div>
+    <div class="fphone"><button class="shot-link" type="button" data-full="/assets/img/shot-emergency.webp" aria-label="Enlarge screenshot: Emergency call confirmation screen — yes, call now, or cancel"><span class="shotwrap"><img class="shotimg reveal-slide" src="/assets/img/shot-emergency.png" srcset="/assets/img/shot-emergency.webp" alt="Emergency call confirmation screen — yes, call now, or cancel" loading="lazy" width="460" height="818"></span></button></div>
   </div>
 </div></section>
 
@@ -235,7 +245,7 @@
 <footer><div class="wrap">
   <div class="foot-grid">
     <div class="foot-brand">
-      <a class="brand" href="/">O<b>T</b>O</a>
+      <a class="brand" href="/"><svg class="bmark" viewBox="84 114 232 162" width="36" height="25" role="img" aria-label="Oto"><circle cx="130" cy="190" r="34" fill="none" stroke="#2a2320" stroke-width="15"/><circle cx="270" cy="190" r="34" fill="none" stroke="#2a2320" stroke-width="15"/><rect x="155" y="120" width="90" height="22" rx="11" fill="#a8432f"/><rect x="189" y="131" width="22" height="139" rx="11" fill="#a8432f"/></svg><span>OTO</span></a>
       <p>One calm screen for someone you love. They initiate, family receives — freedom for them, peace of mind for you.</p>
     </div>
     <div class="foot-col">

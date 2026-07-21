@@ -41,11 +41,21 @@
   .foot-legal{border-top:1px solid var(--line);margin-top:38px;padding-top:22px;font-size:11px;color:var(--text-faint);line-height:1.7;text-transform:uppercase;letter-spacing:.5px}
   .foot-legal a{color:var(--text-dim);text-decoration:underline;text-underline-offset:2px}
   @media(max-width:860px){.foot-grid{grid-template-columns:1fr 1fr}}
+
+  /* --- brand lockup: the app's own drawn mark, not the launcher PNG --- */
+  .brand{display:inline-flex;align-items:center;gap:9px;font-weight:900;font-size:17px;letter-spacing:3px}
+  .brand .bmark{width:36px;height:auto;flex:none;display:block}
+  .foot-brand .brand .bmark{width:32px;height:auto}
+  .hero .heromark{width:172px;height:auto;display:block;margin:0 auto 26px}
+  /* --- phone screenshots: warm-black bezel so cream shots read on cream --- */
+  .shotwrap{background:#2a2320;padding:9px;border-radius:30px;display:inline-block;line-height:0;
+    box-shadow:0 26px 60px -26px rgba(42,35,32,.55), 0 2px 0 rgba(255,255,255,.5) inset}
+  .shotimg{width:min(230px,72vw);height:auto;border-radius:22px;border:0;box-shadow:none;display:block}
 </style>
 </head>
 <body>
 <nav><div class="navin">
-  <a class="brand" href="/">O<b>T</b>O</a>
+  <a class="brand" href="/"><svg class="bmark" viewBox="84 114 232 162" width="36" height="25" role="img" aria-label="Oto"><circle cx="130" cy="190" r="34" fill="none" stroke="#2a2320" stroke-width="15"/><circle cx="270" cy="190" r="34" fill="none" stroke="#2a2320" stroke-width="15"/><rect x="155" y="120" width="90" height="22" rx="11" fill="#a8432f"/><rect x="189" y="131" width="22" height="139" rx="11" fill="#a8432f"/></svg><span>OTO</span></a>
   <div class="nav-r">
     <a href="/#features">Features</a>
     <a href="/#benefits">Why it's different</a>
@@ -54,7 +64,7 @@
 </div></nav>
 
 <main>
-  <img class="icon" src="/assets/img/app-icon.png" alt="Oto app icon" width="96" height="96">
+  <svg class="heromark" viewBox="84 114 232 162" width="172" height="120" role="img" aria-label="Oto"><circle cx="130" cy="190" r="34" fill="none" stroke="#2a2320" stroke-width="15"/><circle cx="270" cy="190" r="34" fill="none" stroke="#2a2320" stroke-width="15"/><rect x="155" y="120" width="90" height="22" rx="11" fill="#a8432f"/><rect x="189" y="131" width="22" height="139" rx="11" fill="#a8432f"/></svg>
   <div class="eyebrow">Get Oto</div>
   <h1>Coming to Google Play.</h1>
   <p class="sub">Oto is in development — being built for a real grandparent in a real assisted-living home, and for everyone like them. When it's ready, it will be here.</p>
@@ -65,7 +75,7 @@
 <footer><div class="wrap">
   <div class="foot-grid">
     <div class="foot-brand">
-      <a class="brand" href="/">O<b>T</b>O</a>
+      <a class="brand" href="/"><svg class="bmark" viewBox="84 114 232 162" width="36" height="25" role="img" aria-label="Oto"><circle cx="130" cy="190" r="34" fill="none" stroke="#2a2320" stroke-width="15"/><circle cx="270" cy="190" r="34" fill="none" stroke="#2a2320" stroke-width="15"/><rect x="155" y="120" width="90" height="22" rx="11" fill="#a8432f"/><rect x="189" y="131" width="22" height="139" rx="11" fill="#a8432f"/></svg><span>OTO</span></a>
       <p>One calm screen for someone you love. They initiate, family receives — freedom for them, peace of mind for you.</p>
     </div>
     <div class="foot-col">
