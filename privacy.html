@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy Policy | oTo</title>
-<meta name="description" content="oTo's privacy policy: no tracking, no location, no surveillance. Everything family sees is something they chose to send.">
+<meta name="description" content="oTo's privacy policy: no tracking, no location, no surveillance — and the complete, published list of what the family-circle server stores.">
 <link rel="canonical" href="https://otoshiyori.health/privacy.html">
 <link rel="icon" href="/favicon.ico" sizes="16x16 32x32 48x48">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -86,21 +86,21 @@
   <div class="wrap">
     <span class="eyebrow">Legal</span>
     <h1>Privacy Policy</h1>
-    <div class="meta">Effective date: <time datetime="2026-07-16">July 16, 2026</time> · Applies to the oTo app and otoshiyori.health</div>
+    <div class="meta">Effective date: <time datetime="2026-07-21">July 21, 2026</time> · Applies to the oTo app, the family circle, and otoshiyori.health</div>
   </div>
 </header>
 
 <main class="wrap">
   <div class="legal">
 
-    <p class="lede">oTo (the "app") is built and published by Ubersoft ("we," "us," "our") on one rule: <b>they initiate, family receives.</b> The app does not track its user — no location, no monitoring, no surveillance. Everything a family member sees is something they chose to send.</p>
+    <p class="lede">oTo (the "app") is built and published by Ubersoft ("we," "us," "our") on one rule: <b>they initiate, family receives.</b> The app does not track its user — no location, no monitoring, no surveillance. Everything a family member sees is something they sent — except one message the family can switch on: word that a check-in did not arrive.</p>
 
     <div class="summary">
       <div class="st">In plain terms</div>
       <ul>
         <li><span class="tick"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span><span><b>No tracking.</b> No GPS, no location, no movement data, no activity monitoring.</span></li>
         <li><span class="tick"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span><span><b>No surveillance.</b> No ambient audio, video, photos, or screen activity — ever.</span></li>
-        <li><span class="tick"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span><span><b>They choose what's shared.</b> Check-ins and help requests go only to the family they approved.</span></li>
+        <li><span class="tick"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span><span><b>They choose what's shared.</b> Check-ins and help requests go only to family who confirmed by email — plus, if you turn it on, word that a check-in didn't arrive.</span></li>
         <li><span class="tick"><svg viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></svg></span><span><b>No ads, nothing sold.</b> No advertising identifiers, no analytics tied to them, no data sold or shared.</span></li>
       </ul>
     </div>
@@ -110,26 +110,45 @@
       <li>Their contacts (names, photos, phone numbers), their schedule, and their preferences — stored on the device.</li>
     </ul>
 
-    <h2><span class="n">02</span> Check-ins and help requests — the one thing that leaves</h2>
-    <p>Check-ins ("I'm okay today") and help requests are the only information that leaves the device. They are delivered <b>only</b> to the family members added during setup, and are kept only as recent history. Nothing is sent that the user didn't choose to send.</p>
+    <h2><span class="n">02</span> What leaves the device</h2>
+    <p>Three things leave the phone, and only when a family circle has been connected:</p>
+    <ul class="body-list">
+      <li><b>Check-ins.</b> "I'm okay today" — sent because they tapped the button.</li>
+      <li><b>Help requests.</b> When they confirm an emergency, the circle is told they pressed for help and called emergency services.</li>
+      <li><b>Missed check-ins.</b> If no check-in has arrived by the hour the family chose, the circle is told that none arrived. This is the one message oTo sends without them acting, and it is triggered by <i>absence</i> — never by watching them. It can be switched off.</li>
+    </ul>
+    <p>Nothing else is transmitted. Messages carry their first name and what happened — never their location, and never the contents of anything else in the app.</p>
 
-    <h2><span class="n">03</span> What oTo never collects</h2>
+    <h2><span class="n">03</span> What the oTo server stores</h2>
+    <p>The family channel runs on a deliberately tiny server. This is the complete list of what it holds:</p>
+    <ul class="body-list">
+      <li>A circle id, and hashed pairing and device tokens.</li>
+      <li>Their first name (so messages can say who they're from), timezone, the chosen worry window, and the check-in rhythm.</li>
+      <li>Family contact handles (phone or email) and each person's alert preferences, each verified before any message is sent — this exists to stop oTo from being used to message people who never agreed.</li>
+      <li>A single <i>last check-in</i> timestamp, overwritten each time. Not a history.</li>
+    </ul>
+    <p>Nothing else: no location, no message bodies, no contact books, no analytics events. All of the app's own data — faces, schedule, settings — stays on their phone.</p>
+
+    <h2><span class="n">04</span> Family members and consent</h2>
+    <p>A circle holds up to six people. Each is added by name and contact handle, then receives one email and confirms from their own inbox before anything is ever sent to them. Declining deletes their address immediately. Family members need no account, no app, and no purchase, and can remove themselves at any time.</p>
+
+    <h2><span class="n">05</span> What oTo never collects</h2>
     <ul class="body-list">
       <li>Location, movement, or GPS data of any kind.</li>
       <li>Ambient audio, video, photos, or screen activity.</li>
       <li>Usage analytics tied to their identity, advertising identifiers, or any data sold or shared with third parties.</li>
     </ul>
 
-    <h2><span class="n">04</span> Calls</h2>
-    <p>Calls placed from oTo go through the phone's own dialer or calling apps. oTo does not record, route, or listen to calls.</p>
+    <h2><span class="n">06</span> Calls and messages</h2>
+    <p>Calls placed from oTo go through the phone's own dialer or calling apps. oTo does not record, route, or listen to calls. Circle messages are delivered by web notification or email; optional text messages for relatives without a smartphone are sent through a carrier gateway, which sees only the number and the message text.</p>
 
-    <h2><span class="n">05</span> This website</h2>
+    <h2><span class="n">07</span> This website</h2>
     <p>otoshiyori.health uses privacy-friendly, cookieless page counting (GoatCounter) to see how many people visit. No personal profiles, no cross-site tracking, no ads.</p>
 
-    <h2><span class="n">06</span> Changes to this policy</h2>
+    <h2><span class="n">08</span> Changes to this policy</h2>
     <p>oTo is in active development; this policy will be updated as the app takes final shape, and material changes will be noted here with a new effective date.</p>
 
-    <h2><span class="n">07</span> Contact</h2>
+    <h2><span class="n">09</span> Contact</h2>
     <p>Questions about privacy? Reach us at <a class="link" href="mailto:support@ubersoft.pro">support@ubersoft.pro</a>.</p>
 
   </div>
@@ -158,7 +177,7 @@
     </div>
   </div>
   <p class="foot-legal">
-    No tracking, no surveillance — everything family sees, they chose to send.<br>
+    No tracking, no surveillance — everything family sees, they sent; only silence speaks for them.<br>
     Google Play and the Google Play logo are trademarks of Google LLC.<br>© <span id="cpyear">2026</span> <a href="https://ubersoft.pro" target="_blank" rel="noopener">Ubersoft</a>. All rights reserved.
   </p>
 </div></footer>

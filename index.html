@@ -4,10 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>oTo | Freedom for Them. Peace of Mind for You.</title>
-<meta name="description" content="oTo is one calm screen for someone you love in assisted living — they call family with a tap, tell you they're okay, see their day, and can always reach help. They initiate. Family receives. Never surveillance.">
+<meta name="description" content="oTo is one calm screen for someone you love in assisted living — they call family with a tap, tell you they're okay, and can always reach help. Family gets the check-ins and a nudge if a day goes quiet. No tracking, no subscription.">
 <link rel="canonical" href="https://otoshiyori.health/">
 <meta property="og:title" content="oTo — Freedom for them. Peace of mind for you.">
-<meta property="og:description" content="A dignity-first companion app for older adults. They call, they check in, they ask for help — on their terms.">
+<meta property="og:description" content="A dignity-first companion app for older adults. They call, they check in, they ask for help — on their terms. Family hears from them, free, with no subscription.">
 <meta property="og:image" content="https://otoshiyori.health/assets/img/og.png">
 <meta property="og:url" content="https://otoshiyori.health/">
 <meta property="og:type" content="website">
@@ -20,9 +20,13 @@
 <script type="application/ld+json">
 { "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
   { "@type": "Question", "name": "Is oTo a monitoring app?",
-    "acceptedAnswer": { "@type": "Answer", "text": "No — and that's the point. oTo has no GPS, no location tracking, no camera watching, and no family dashboard of their activity. Everything family sees is something they chose to send." } },
-  { "@type": "Question", "name": "When will oTo be available?",
-    "acceptedAnswer": { "@type": "Answer", "text": "oTo is in development. It will launch on Google Play; you can write to support@ubersoft.pro to hear when it's ready." } },
+    "acceptedAnswer": { "@type": "Answer", "text": "No. oTo has no GPS, no location tracking, no camera watching, and no family dashboard of their activity. Everything family sees is something they sent — with one deliberate exception: if no check-in arrives by the hour the family chose, the circle is told that none arrived. Absence is the only thing oTo ever reports on its own." } },
+  { "@type": "Question", "name": "Does the family need the app too?",
+    "acceptedAnswer": { "@type": "Answer", "text": "Only the person who sets up the circle runs oTo on their own phone. Everyone else just confirms by email once and then receives notifications on any phone — no app, no account, no purchase." } },
+  { "@type": "Question", "name": "What does the oTo server store?",
+    "acceptedAnswer": { "@type": "Answer", "text": "A circle id, hashed pairing tokens, their first name, timezone, the chosen worry window and check-in rhythm, family contact handles with each person's alert preference, and one timestamp of the last check-in. No location, no message contents, no contact books, no analytics." } },
+  { "@type": "Question", "name": "Is there a subscription?",
+    "acceptedAnswer": { "@type": "Answer", "text": "No. oTo is a one-time purchase and the family channel — check-ins, missed check-in alerts and emergencies by notification or email — is included free, forever. Only optional text messages to relatives without smartphones are charged, at cost." } },
   { "@type": "Question", "name": "Who is oTo for?",
     "acceptedAnswer": { "@type": "Answer", "text": "Older adults — especially in assisted living — and people with limited mobility or dexterity, plus the families who love them." } }
 ]}
@@ -97,6 +101,15 @@
   .ben h3{font-size:14px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;margin-bottom:8px}
   .ben .ico{width:26px;height:26px;color:var(--green);margin-bottom:14px;display:block}
   .ben p{color:var(--text-dim);font-size:13.5px;line-height:1.65;font-weight:300}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;counter-reset:step}
+  .step{background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--r);padding:26px 24px;counter-increment:step}
+  .step::before{content:counter(step,decimal-leading-zero);display:block;font-size:11px;font-weight:800;letter-spacing:.16em;color:var(--green);margin-bottom:12px}
+  .step h3{font-size:14px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;margin-bottom:8px}
+  .step p{color:var(--text-dim);font-size:13.5px;line-height:1.65;font-weight:300}
+  .worry{margin-top:14px;border:1px solid var(--line);border-radius:var(--r);background:var(--bg-soft);padding:26px 24px;display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:start}
+  .worry .ico{width:26px;height:26px;color:var(--green);flex:none}
+  .worry h3{font-size:14px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;margin-bottom:8px}
+  .worry p{color:var(--text-dim);font-size:13.5px;line-height:1.65;font-weight:300;max-width:60em}
   .faq{border:1px solid var(--line);border-radius:var(--r);background:var(--bg-soft);margin-bottom:10px}
   .faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;padding:18px 20px;font-weight:700;font-size:15px}
   .faq summary::-webkit-details-marker{display:none}
@@ -124,6 +137,8 @@
     .feature.flip .ftext{order:0}
     .fphone{order:-1}
     .bens{grid-template-columns:1fr}
+    .steps{grid-template-columns:1fr}
+    .worry{grid-template-columns:1fr}
     .foot-grid{grid-template-columns:1fr 1fr}
   }
 
@@ -156,9 +171,9 @@
   <svg class="heromark" viewBox="84 114 232 162" width="172" height="120" role="img" aria-label="oTo"><circle cx="130" cy="190" r="34" fill="none" stroke="#2a2320" stroke-width="15"/><circle cx="270" cy="190" r="34" fill="none" stroke="#2a2320" stroke-width="15"/><rect x="155" y="120" width="90" height="22" rx="11" fill="#a8432f"/><rect x="189" y="131" width="22" height="139" rx="11" fill="#a8432f"/></svg>
   <div class="eyebrow">oTo · お年寄り</div>
   <h1>Freedom for them. <em>Peace of mind</em> for you.</h1>
-  <p class="sub">One calm screen for someone you love in assisted living. They call family with a tap, tell you they're okay, see their day, and can always reach help — on their terms, never under surveillance.</p>
+  <p class="sub">One calm screen for someone you love in assisted living. They call family with a tap, tell you they're okay, see their day, and can always reach help. You get the circle that hears them — and a nudge if a day goes quiet. No tracking, no subscription, ever.</p>
   <div class="cta"><span class="chip-soon"><i></i>In development — coming to Google Play</span></div>
-  <div class="trust"><span>They initiate</span><span>No tracking</span><span>No account</span></div>
+  <div class="trust"><span>They initiate</span><span>No tracking</span><span>Never a subscription</span></div>
 </div></header>
 
 <div class="stats">
@@ -166,8 +181,8 @@
     <div class="stats-in">
       <div class="stat reveal"><div class="ico" style="color:var(--green)"><svg viewBox="0 0 24 24"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 2 .7 2.9a2 2 0 0 1-.5 2.1L8 10a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.9.6 2.9.7a2 2 0 0 1 1.7 2z"/></svg></div><div class="n">1</div><div class="k">Tap to reach family</div></div>
       <div class="stat reveal"><div class="ico" style="color:var(--green)"><svg viewBox="0 0 24 24"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><path d="M4 4l16 16"/></svg></div><div class="n">0</div><div class="k">Tracking &amp; surveillance</div></div>
-      <div class="stat reveal"><div class="ico" style="color:var(--green)"><svg viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7" rx="1"/><rect x="13" y="4" width="7" height="7" rx="1"/><rect x="4" y="13" width="7" height="7" rx="1"/><rect x="13" y="13" width="7" height="7" rx="1"/></svg></div><div class="n">4</div><div class="k">Things, done gently</div></div>
-      <div class="stat reveal"><div class="ico" style="color:var(--green)"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M8.5 12.5l2.5 2.5 4.5-5"/></svg></div><div class="n">100<span class="a">%</span></div><div class="k">Their choice, always</div></div>
+      <div class="stat reveal"><div class="ico" style="color:var(--green)"><svg viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0"/><circle cx="17.5" cy="10" r="2.5"/><path d="M15 20a5 5 0 0 1 6.5-4.8"/></svg></div><div class="n">6</div><div class="k">In the family circle</div></div>
+      <div class="stat reveal"><div class="ico" style="color:var(--green)"><svg viewBox="0 0 24 24"><path d="M20.6 13.4l-7.2 7.2a2 2 0 0 1-2.8 0L2 12V2h10l8.6 8.6a2 2 0 0 1 0 2.8z"/><circle cx="7" cy="7" r="1.3"/></svg></div><div class="n"><span class="a">$</span>0</div><div class="k">Per message, forever</div></div>
     </div>
   </div>
 </div>
@@ -216,6 +231,35 @@
   </div>
 </div></section>
 
+<section id="circle"><div class="wrap">
+  <div class="sec-head reveal">
+    <span class="eyebrow">The family circle</span>
+    <h2>Two phones. One quiet thread.</h2>
+    <p>oTo runs on their phone and on yours. Theirs is the warm home screen. Yours sets up the circle — up to six people who hear from them, and hear if a day goes quiet.</p>
+  </div>
+  <div class="steps">
+    <div class="step reveal">
+      <h3>You set up the circle</h3>
+      <p>On your own phone, you create the circle and add the family — names and how each person prefers to hear. Their phone joins with a six-character code. No accounts, no passwords, for anyone.</p>
+    </div>
+    <div class="step reveal">
+      <h3>Everyone says yes first</h3>
+      <p>Each person gets one email and confirms from their own inbox. Nobody is added to a circle without agreeing to it, and a "no thanks" deletes their address on the spot.</p>
+    </div>
+    <div class="step reveal">
+      <h3>Word arrives, free</h3>
+      <p>Check-ins and emergencies land as real notifications on every family phone — or by email if that's easier. No app to install, and never a per-message charge.</p>
+    </div>
+  </div>
+  <div class="worry reveal">
+    <svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2"/><path d="M5 3.5 2.5 6M19 3.5 21.5 6"/></svg>
+    <div>
+      <h3>And if the day stays quiet</h3>
+      <p>You choose an hour to start worrying — say eleven in the morning. If no check-in has come by then, the circle gets a gentle nudge: "No check-in from Alex by 11:00 — maybe give a ring." That's the one thing this whole category charges a subscription for. Here it comes with the app, free, forever — because an older adult talking to their family should never be metered.</p>
+    </div>
+  </div>
+</div></section>
+
 <section id="benefits" style="background:var(--bg-soft);border-top:1px solid var(--line);border-bottom:1px solid var(--line)"><div class="wrap">
   <div class="sec-head reveal">
     <span class="eyebrow">Why it's different</span>
@@ -223,11 +267,11 @@
     <p>Most "senior safety" apps quietly become surveillance the family loves and the person resents. oTo is built the other way up.</p>
   </div>
   <div class="bens">
-    <div class="ben reveal"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V6"/><path d="M6.5 11.5 12 6l5.5 5.5"/><circle cx="12" cy="21" r="1.4"/></svg><h3>They initiate</h3><p>Every signal the family sees is something they chose to send. The safety net stays invisible until it's truly needed.</p></div>
+    <div class="ben reveal"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V6"/><path d="M6.5 11.5 12 6l5.5 5.5"/><circle cx="12" cy="21" r="1.4"/></svg><h3>They initiate</h3><p>Every signal the family sees is one they sent themselves — the only exception is word that a quiet day stayed quiet. The safety net stays invisible until it's truly needed.</p></div>
     <div class="ben reveal"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><path d="M4 4l16 16"/></svg><h3>No tracking</h3><p>No GPS, no location history, no camera watching, no activity dashboard. If it would feel like being watched, it isn't in oTo.</p></div>
     <div class="ben reveal"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7V5h10v2"/><path d="M8 5v14"/><path d="M5 19h6"/><path d="M15 12v-1h6v1"/><path d="M18 11v8"/><path d="M16 19h4"/></svg><h3>Big &amp; readable</h3><p>Large type, generous targets, high contrast, and lots of air. Built for older eyes and hands that aren't as steady as they were.</p></div>
     <div class="ben reveal"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1 1A16 16 0 0 1 4 5a1 1 0 0 1 1-1z"/></svg><h3>Real phone calls</h3><p>Calls go through the phone's own dialer — reliable, familiar, and they work even when the app doesn't.</p></div>
-    <div class="ben reveal"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0"/><circle cx="17.5" cy="10" r="2.5"/><path d="M15 20a5 5 0 0 1 6.5-4.8"/></svg><h3>Family stays close</h3><p>The family side is deliberately tiny: a gentle "they're okay today" and a call button. Peace of mind, not a monitoring console.</p></div>
+    <div class="ben reveal"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3"/><path d="M3 20a6 6 0 0 1 12 0"/><circle cx="17.5" cy="10" r="2.5"/><path d="M15 20a5 5 0 0 1 6.5-4.8"/></svg><h3>Family stays close</h3><p>Up to six people, each one having said yes by email first. What they get is a gentle "they're okay today" — and a nudge on a quiet morning. Peace of mind, not a monitoring console.</p></div>
     <div class="ben reveal"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="4.5" r="2"/><path d="M5 9h14"/><path d="M12 9v5"/><path d="M12 14l-3 6"/><path d="M12 14l3 6"/></svg><h3>For every ability</h3><p>Designed with older adults and people with limited mobility or dexterity in mind — including those who need a little help answering.</p></div>
   </div>
 </div></section>
@@ -237,7 +281,10 @@
     <span class="eyebrow">FAQ</span>
     <h2>Fair questions.</h2>
   </div>
-  <details class="faq"><summary>Is oTo a monitoring app?<span class="fx" aria-hidden="true"></span></summary><p>No — and that's the point. There's no GPS, no location tracking, and no dashboard of their activity. Everything family sees is something they chose to send. oTo is theirs; family receives.</p></details>
+  <details class="faq"><summary>Is oTo a monitoring app?<span class="fx" aria-hidden="true"></span></summary><p>No. There's no GPS, no location tracking, and no dashboard of their activity. Everything family sees is something they sent — with one deliberate exception, and we'd rather name it than hide it: if no check-in has arrived by the hour you chose, the circle is told that none arrived. Absence is the only thing oTo ever reports on its own, and they know it works that way.</p></details>
+  <details class="faq"><summary>Does the family need the app too?<span class="fx" aria-hidden="true"></span></summary><p>Only the person setting up the circle runs oTo on their own phone. Everyone else confirms by email once, then gets notifications on whatever phone they already have — no app to install, no account, nothing to buy.</p></details>
+  <details class="faq"><summary>What does the oTo server store?<span class="fx" aria-hidden="true"></span></summary><p>Deliberately almost nothing: a circle id, hashed pairing tokens, their first name, timezone, the worry window and check-in rhythm you chose, family contact handles with each person's alert preference, and a single timestamp of the last check-in — overwritten, not a history. No location, no message contents, no contact books, no analytics. The full list is on our <a class="link" href="/privacy.html" style="color:var(--green)">privacy page</a>, published word for word.</p></details>
+  <details class="faq"><summary>Is there a subscription?<span class="fx" aria-hidden="true"></span></summary><p>No, and there won't be. oTo is bought once, and the family channel — check-ins, quiet-morning nudges, emergencies — is included free, forever. The only paid extra is text messages for relatives without a smartphone, passed through at what they cost us. An older adult talking to their family should never be metered.</p></details>
   <details class="faq"><summary>Who sets up their schedule?<span class="fx" aria-hidden="true"></span></summary><p>They own it. Family can help — repeating things like medication get set up once, together — and anything family adds appears clearly labeled and can be removed. Nothing ever changes behind their back.</p></details>
   <details class="faq"><summary>What about real emergencies?<span class="fx" aria-hidden="true"></span></summary><p>The help button reaches a real person — family or the facility's nurse line. A true emergency-services call is there too, always behind a calm "are you sure?" confirm so an accidental tap never dials an ambulance.</p></details>
   <details class="faq"><summary>Who is oTo for?<span class="fx" aria-hidden="true"></span></summary><p>Older adults — especially in assisted living — and people with limited mobility or dexterity, plus the families who love them. "Otoshiyori" (お年寄り) is Japanese for the elderly.</p></details>
@@ -274,7 +321,7 @@
     </div>
   </div>
   <p class="foot-legal">
-    No tracking, no surveillance — everything family sees, they chose to send.<br>
+    No tracking, no surveillance — everything family sees, they sent; only silence speaks for them.<br>
     Google Play and the Google Play logo are trademarks of Google LLC.<br>© <span id="cpyear">2026</span> <a href="https://ubersoft.pro" target="_blank" rel="noopener">Ubersoft</a>. All rights reserved.
   </p>
 </div></footer>
