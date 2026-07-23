@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://waveday.app/sitemap.xml
+Sitemap: https://wavetoday.app/sitemap.xml
