@@ -1,5 +1,5 @@
 /* Outfit — self-hosted for wavetoday.app, from the same two woff2 files the app
-   ships (app/assets/fonts/, vendored by ubersoft/tools/vendor-fonts.mjs).
+   ships (app/assets/fonts/, vendored by vendor-fonts.mjs).
 
    The pages used to <link> Google Fonts. That is a no-CDN violation (house
    standard §3) and it also meant every visitor to a privacy-first product's
