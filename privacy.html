@@ -101,12 +101,12 @@
       </ul>
     </div>
 
-    <h2><span class="n">01</span> What Wave stores on the device</h2>
+    <h2><span class="n">01</span> Information the app stores on your device</h2>
     <ul class="body-list">
       <li>Their contacts (names, photos, phone numbers), their schedule, and their preferences — stored on the device.</li>
     </ul>
 
-    <h2><span class="n">02</span> What leaves the device</h2>
+    <h2><span class="n">01.5</span> What leaves the device</h2>
     <p>Three things leave the phone, and only when a family circle has been connected:</p>
     <ul class="body-list">
       <li><b>Check-ins.</b> "I'm okay today" — sent because they tapped the button.</li>
@@ -115,7 +115,7 @@
     </ul>
     <p>Nothing else is transmitted. Messages carry their first name and what happened — never their location, and never the contents of anything else in the app.</p>
 
-    <h2><span class="n">03</span> What the Wave server stores</h2>
+    <h2><span class="n">01.6</span> What the Wave server stores</h2>
     <p>The family channel runs on a deliberately tiny server. This is the complete list of what it holds:</p>
     <ul class="body-list">
       <li>A circle id, and hashed pairing and device tokens.</li>
@@ -125,26 +125,74 @@
     </ul>
     <p>Nothing else: no location, no message bodies, no contact books, no analytics events. All of the app's own data — faces, schedule, settings — stays on their phone.</p>
 
-    <h2><span class="n">04</span> Family members and consent</h2>
-    <p>A circle holds up to six people. Each is added by name and contact handle, then receives one email and confirms from their own inbox before anything is ever sent to them. Declining deletes their address immediately. Family members need no account, no app, and no purchase, and can remove themselves at any time.</p>
-
-    <h2><span class="n">05</span> What Wave never collects</h2>
+    <h2><span class="n">02</span> Information we collect</h2>
+    <p>Wave has no accounts and no sign-up. The app collects nothing about the person using it — everything it holds stays on their phone (01). The only information we hold anywhere is the small family-channel record listed in 01.6, and only once a circle has been connected.</p>
+    <p>Wave never collects:</p>
     <ul class="body-list">
-      <li>Location, movement, or GPS data of any kind.</li>
+      <li>Location, movement, or GPS data of any kind — with one exception the person turns on themselves, described in 05.</li>
       <li>Ambient audio, video, photos, or screen activity.</li>
       <li>Usage analytics tied to their identity, advertising identifiers, or any data sold or shared with third parties.</li>
+      <li>Their address book. Wave asks for no contacts permission at all — see 05.</li>
     </ul>
 
-    <h2><span class="n">06</span> Calls and messages</h2>
+    <h2><span class="n">02.5</span> Family members and consent</h2>
+    <p>A circle holds up to six people. Each is added by name and contact handle, then receives one email and confirms from their own inbox before anything is ever sent to them. Declining deletes their address immediately. Family members need no account, no app, and no purchase, and can remove themselves at any time.</p>
+
+    <h2><span class="n">03</span> Analytics and advertising</h2>
+    <p><b>In the app: none.</b> No analytics SDK, no advertising identifier, no ads, no profiling, and no third-party trackers of any kind.</p>
+    <p><b>On this website:</b> wavetoday.app uses privacy-friendly, cookieless page counting (GoatCounter) to see how many people visit. No personal profiles, no cross-site tracking, no ads.</p>
+
+    <h2><span class="n">04</span> Purchases</h2>
+    <p>Wave is free to download and free forever for the person holding the phone. One family member unlocks the family circle once, as a single in-app purchase handled entirely by Google Play.</p>
+    <p><b>We never see payment details.</b> Card numbers, billing addresses and the rest are handled by Google and never reach us. To confirm an unlock is genuine and tie it to one circle, our server stores a <i>hashed</i> purchase token, the Google order id, and the time it was verified. Nothing else.</p>
+
+    <h2><span class="n">05</span> Permissions</h2>
+    <p>Wave asks for as little as it can, and each permission exists for one visible feature:</p>
+    <ul class="body-list">
+      <li><b>Phone calls.</b> So tapping a face, or confirming an emergency, places the call directly instead of only opening the dialer. If it is denied, Wave falls back to the dialer — a denied permission can never stop a call going through.</li>
+      <li><b>Location (optional, off unless turned on).</b> Used once, at the moment they confirm a call for help, so the message to family can say where they are. Never before, never after, never in the background. It can be switched off at any time.</li>
+      <li><b>Internet.</b> For the family channel and for a shared family calendar, if one is set up.</li>
+      <li><b>Billing.</b> For the one-time circle unlock described in 04.</li>
+    </ul>
+    <p><b>No contacts permission.</b> Choosing a family member opens the phone's own contact picker, which hands Wave only the single person tapped. Wave never reads the address book.</p>
+
+    <h2><span class="n">05.5</span> Calls and messages</h2>
     <p>Calls placed from Wave go through the phone's own dialer or calling apps. Wave does not record, route, or listen to calls. Circle messages are delivered by web notification or email; optional text messages for relatives without a smartphone are sent through a carrier gateway, which sees only the number and the message text.</p>
 
-    <h2><span class="n">07</span> This website</h2>
-    <p>wavetoday.app uses privacy-friendly, cookieless page counting (GoatCounter) to see how many people visit. No personal profiles, no cross-site tracking, no ads.</p>
+    <h2><span class="n">06</span> Children's privacy</h2>
+    <p>Wave is made for older adults and the families who care for them. It is not directed to children, we do not knowingly collect information from anyone under 13, and nothing in the app is designed for or marketed to children. If you believe a child's information has reached us, write to us and we will delete it.</p>
 
-    <h2><span class="n">08</span> Changes to this policy</h2>
+    <h2><span class="n">07</span> Your choices and rights</h2>
+    <ul class="body-list">
+      <li><b>Everything on the phone is theirs.</b> Contacts, schedule, photos and settings live only on the device — uninstalling Wave, or clearing its storage, removes them completely. We hold no copy.</li>
+      <li><b>Turn off the missed check-in notice.</b> It is the one message Wave sends without them acting; it can be switched off in the app.</li>
+      <li><b>Never share location.</b> It is off unless turned on, and can be turned back off at any time.</li>
+      <li><b>Leave a circle.</b> Any family member can remove themselves, and declining the first email deletes their address on the spot.</li>
+      <li><b>Delete the circle.</b> Write to us and we will delete the circle record and everything attached to it.</li>
+    </ul>
+
+    <h2><span class="n">08</span> Data security</h2>
+    <ul class="body-list">
+      <li>Everything travels over encrypted connections (HTTPS).</li>
+      <li>Device and pairing tokens are stored only as one-way hashes, so a copy of our database yields nothing that could be used.</li>
+      <li>When a family member adjusts settings remotely, the change is end-to-end encrypted between the two phones. Our server relays it without being able to read it.</li>
+      <li>Nothing is delivered to an address that has not confirmed itself first.</li>
+    </ul>
+
+    <h2><span class="n">09</span> Third-party services</h2>
+    <p>Wave uses as few outside services as it can, and none of them receive anything about the person using the app beyond what is needed to deliver a message:</p>
+    <ul class="body-list">
+      <li><b>Cloudflare</b> — runs the family-channel server and its database.</li>
+      <li><b>Google Play</b> — the app store, and the billing for the one-time unlock (04).</li>
+      <li><b>Resend</b> — sends the consent and circle emails.</li>
+      <li><b>Web push services</b> (Google, Apple, Mozilla, Microsoft) — deliver the notification that wakes a family member's phone. The push itself carries no content.</li>
+      <li><b>GoatCounter</b> — cookieless page counting on this website only (03).</li>
+    </ul>
+
+    <h2><span class="n">10</span> Changes to this policy</h2>
     <p>Wave is in active development; this policy will be updated as the app takes final shape, and material changes will be noted here with a new effective date.</p>
 
-    <h2><span class="n">09</span> Contact</h2>
+    <h2><span class="n">11</span> Contact</h2>
     <p>Questions about privacy? Reach us at <a class="link" href="mailto:support@ubersoft.pro">support@ubersoft.pro</a>.</p>
 
   </div>
