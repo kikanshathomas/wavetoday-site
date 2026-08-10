@@ -82,14 +82,14 @@
   <div class="wrap">
     <span class="eyebrow">Legal</span>
     <h1>Privacy Policy</h1>
-    <div class="meta">Effective date: <time datetime="2026-07-21">July 21, 2026</time> · Applies to the Wave app, the family circle, and wavetoday.app</div>
+    <div class="meta">Effective date: <time datetime="2026-08-10">August 10, 2026</time> · Applies to the Wave app, the family circle, and wavetoday.app</div>
   </div>
 </header>
 
 <main class="wrap">
   <div class="legal">
 
-    <p class="lede">Wave (the "app") is built and published by Ubersoft ("we," "us," "our") on one rule: <b>they initiate, family receives.</b> The app does not track its user — no location, no monitoring, no surveillance. Everything a family member sees is something they sent — except one message the family can switch on: word that a check-in did not arrive.</p>
+    <p class="lede">Wave (the "app") is built and published by <b>Ubersoft LLC</b>, a Virginia limited liability company ("Ubersoft," "we," "us," "our") on one rule: <b>they initiate, family receives.</b> The app does not track its user — no location, no monitoring, no surveillance. Everything a family member sees is something they sent — except one message the family can switch on: word that a check-in did not arrive.</p>
 
     <div class="summary">
       <div class="st">In plain terms</div>
@@ -113,7 +113,8 @@
       <li><b>Help requests.</b> When they confirm an emergency, the circle is told they pressed for help and called emergency services.</li>
       <li><b>Missed check-ins.</b> If no check-in has arrived by the hour the family chose, the circle is told that none arrived. This is the one message Wave sends without them acting, and it is triggered by <i>absence</i> — never by watching them. It can be switched off.</li>
     </ul>
-    <p>Nothing else is transmitted. Messages carry their first name and what happened — never their location, and never the contents of anything else in the app.</p>
+    <p>Those messages carry their first name and what happened — never their location, and never the contents of anything else in the app.</p>
+    <p>One more thing can leave, only if they switch on <b>"Let family set up my phone"</b> in Setup: the settings their family has prepared for them — see 01.7. It is off unless they turn it on.</p>
 
     <h2><span class="n">01.6</span> What the Wave server stores</h2>
     <p>The family channel runs on a deliberately tiny server. This is the complete list of what it holds:</p>
@@ -122,17 +123,27 @@
       <li>Their first name (so messages can say who they're from), timezone, the chosen worry window, and the check-in rhythm.</li>
       <li>Family contact handles (phone or email) and each person's alert preferences, each verified before any message is sent — this exists to stop Wave from being used to message people who never agreed.</li>
       <li>A single <i>last check-in</i> timestamp, overwritten each time. Not a history.</li>
+      <li>The public half of the two encryption keys used for 01.7. Public keys are safe to hold; the private halves never leave either phone.</li>
+      <li>A notification address for each browser that opted into alerts, so it can be pinged.</li>
+      <li>Short-lived counters used to rate-limit abuse. Where these involve an IP address, it is stored only as a hash.</li>
+      <li>If a circle has been paid for: a hashed purchase token, the Google order id, and the time it was verified (04).</li>
     </ul>
-    <p>Nothing else: no location, no message bodies, no contact books, no analytics events. All of the app's own data — faces, schedule, settings — stays on their phone.</p>
+    <p>Nothing else: no location, no message bodies, no analytics events. Everything the app holds for daily use — faces, schedule, settings — stays on their phone, with the one exception in 01.7.</p>
+
+    <h2><span class="n">01.7</span> The one exception: family setup help</h2>
+    <p>Setting up a phone for someone is hard to do over the telephone, so family can prepare it for them. It is <b>off unless the person holding the phone turns it on</b>, and they can turn it off again at any time.</p>
+    <p>While it is on, what their family has prepared waits on our server until their phone collects it. That parcel can include the people they can call (names, phone numbers, relationships and photos), their "I'm okay" message, their check-in times, and the emergency-card details they chose to share — date of birth, medical notes, home address.</p>
+    <p><b>We cannot read any of it.</b> It is encrypted on their family's phone with a key only the elder's phone holds, and our server stores nothing but the sealed result — it has no key and never sees the contents. This is why the list in 01.6 says no message bodies: what passes through is sealed, not stored in the open.</p>
+    <p>Each new parcel replaces the last, and the whole thing is erased the moment they switch the setting off. If they never turn it on, none of this data ever leaves their phone at all.</p>
 
     <h2><span class="n">02</span> Information we collect</h2>
-    <p>Wave has no accounts and no sign-up. The app collects nothing about the person using it — everything it holds stays on their phone (01). The only information we hold anywhere is the small family-channel record listed in 01.6, and only once a circle has been connected.</p>
+    <p>Wave has no accounts and no sign-up. The app collects nothing about the person using it — everything it holds for daily use stays on their phone (01). The only information we hold anywhere is the small family-channel record listed in 01.6, and — if they switched on family setup help — the sealed parcel described in 01.7, which we cannot read. Both exist only once a circle has been connected.</p>
     <p>Wave never collects:</p>
     <ul class="body-list">
-      <li>Location, movement, or GPS data of any kind — with one exception the person turns on themselves, described in 05.</li>
-      <li>Ambient audio, video, photos, or screen activity.</li>
+      <li>Location, movement, or GPS data of any kind — with one exception the person turns on themselves, described in 05. Even then it goes straight from their phone into the message to their family; it never reaches our server.</li>
+      <li>Ambient audio, video, or screen activity.</li>
       <li>Usage analytics tied to their identity, advertising identifiers, or any data sold or shared with third parties.</li>
-      <li>Their address book. Wave asks for no contacts permission at all — see 05.</li>
+      <li>Their address book. Wave asks for no contacts permission at all — see 05. Family can type contacts in for them, and those travel sealed (01.7), but Wave never reads the phone's own address book.</li>
     </ul>
 
     <h2><span class="n">02.5</span> Family members and consent</h2>
@@ -191,6 +202,7 @@
 
     <h2><span class="n">10</span> Changes to this policy</h2>
     <p>Wave is in active development; this policy will be updated as the app takes final shape, and material changes will be noted here with a new effective date.</p>
+    <p><b>August 10, 2026.</b> Added 01.7 and expanded 01.6. Family setup help stages the settings a family prepares on our server, sealed, until the elder's phone collects them — the earlier wording said everything stayed on the phone, which was true only while that setting was off. Nothing about how Wave behaves changed; the description of it did. The same update names the remaining items the server holds: public encryption keys, browser notification addresses, and hashed rate-limit counters.</p>
 
     <h2><span class="n">11</span> Contact</h2>
     <p>Questions about privacy? Reach us at <a class="link" href="mailto:support@ubersoft.pro">support@ubersoft.pro</a>.</p>
