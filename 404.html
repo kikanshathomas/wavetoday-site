@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>404 | Wave</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#f7f1e6">
+<!-- Outfit is self-hosted (no CDN, house standard 3): a privacy-first product should not hand every visitor to Google before they read a word. -->
+<link rel="preload" href="/assets/fonts/outfit-2.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/fonts.css">
+<style>
+  :root{--bg:#f7f1e6; --line:#e0d5c2; --text:#2a2320; --text-dim:#6f655c; --text-faint:#756a5f; --green:#a8432f; --r:2px}
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{background:var(--bg); color:var(--text); font-family:'Outfit',system-ui,sans-serif; font-weight:300;
+       min-height:100vh; display:grid; place-items:center; text-align:center; padding:24px}
+  .eyebrow{font-size:11px; font-weight:600; letter-spacing:2.4px; color:var(--text-faint); margin-bottom:18px; text-transform:uppercase}
+  .eyebrow b{color:#a8432f}
+  .n{font-size:clamp(80px,18vw,180px); font-weight:900; letter-spacing:-.04em; line-height:1; color:var(--text)}
+  h1{font-size:clamp(18px,3vw,28px); font-weight:600; margin-top:10px; letter-spacing:-.01em}
+  p{color:var(--text-dim); font-size:14px; margin-top:14px}
+  a.btn{display:inline-block; margin-top:30px; background:var(--text); color:var(--bg); text-decoration:none;
+        padding:12px 26px; border-radius:var(--r); font-weight:600; font-size:13px; transition:opacity .15s}
+  a.btn:hover{opacity:.85}
+
+  /* --- brand lockup: the app's own drawn mark, not the launcher PNG --- */
+  .brand{display:inline-flex;align-items:center;gap:9px;font-weight:900;font-size:17px;letter-spacing:3px}
+  .brand .bmark{width:36px;height:auto;flex:none;display:block}
+  .foot-brand .brand .bmark{width:32px;height:auto}
+  .hero .heromark{width:172px;height:auto;display:block;margin:0 auto 26px}
+</style>
+</head>
+<body>
+  <main>
+    <div class="eyebrow" style="display:flex;align-items:center;justify-content:center;gap:8px"><img class="" src="/assets/img/mark.png" width="30" height="30" alt="Wave"></div>
+    <div class="n">404</div>
+    <h1>This page isn't on the schedule.</h1>
+    <p>It may have moved, or it never existed. Everything else is right where you left it.</p>
+    <a class="btn" href="/">Back home</a>
+  </main>
+  <script data-goatcounter="https://wavetoday.goatcounter.com/count"
+          async src="//gc.zgo.at/count.js"></script>
+</body>
+</html>
