@@ -1,4 +1,10 @@
 <!doctype html>
+<!--
+  Home page for wavetoday.app. Pages also serves this file at /index.html.
+  og:image is /assets/img/og.png at 1024x500, from wavetoday-dev
+  tools/scripts/make-og.mjs. The width and height meta tags have to match that file.
+  The GoatCounter snippet is the cookieless count described in privacy.html section 03.
+-->
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -40,7 +46,7 @@
 ]}
 </script>
 <style>
-  :root{--bg:#f7f1e6; --bg-soft:#ffffff; --line:#e0d5c2; --line2:#e9dfcd; --text:#2a2320; --text-dim:#6f655c; --text-faint:#756a5f; --green:#a8432f; --green-ink:#ffffff; --blue:#9a6b1f; --r:2px}
+  :root{--bg:#f7f1e6; --bg-soft:#ffffff; --line:#e0d5c2; --line2:#e9dfcd; --text:#2a2320; --text-dim:#6f655c; --text-faint:#756a5f; --green:#a8432f; --green-ink:#ffffff; --r:2px}
   *{margin:0;padding:0;box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{background:var(--bg); color:var(--text); font-family:'Outfit',system-ui,sans-serif; overflow-x:hidden}
@@ -101,9 +107,6 @@
   @media (prefers-reduced-motion:no-preference){.lightbox img{animation:lbpop .2s ease}}
   @keyframes lbpop{from{transform:scale(.97); opacity:0} to{transform:scale(1); opacity:1}}
 
-  .fphone .reveal-slide{opacity:0;transform:translateX(64px);transition:opacity .75s cubic-bezier(.2,.7,.2,1) .12s,transform .75s cubic-bezier(.2,.7,.2,1) .12s}
-  .feature.flip .reveal-slide{transform:translateX(-64px)}
-  .feature.in .reveal-slide{opacity:1;transform:none}
   .bens{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
   .ben{background:var(--bg-soft);border:1px solid var(--line);border-radius:var(--r);padding:26px 24px}
   .ben h3{font-size:14px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;margin-bottom:8px}
@@ -138,7 +141,7 @@
   .foot-legal a{color:var(--text-dim);text-decoration:underline;text-underline-offset:2px}
   .reveal{opacity:0;transform:translateY(20px);transition:opacity .6s cubic-bezier(.2,.7,.2,1),transform .6s cubic-bezier(.2,.7,.2,1)}
   .reveal.in{opacity:1;transform:none}
-  @media(prefers-reduced-motion:reduce){.reveal,.reveal-slide,.fphone .reveal-slide{transition:none!important;transform:none!important;opacity:1!important}}
+  @media(prefers-reduced-motion:reduce){.reveal{transition:none!important;transform:none!important;opacity:1!important}}
   @media(max-width:860px){
     .stats-in{grid-template-columns:repeat(2,1fr)}
     .feature{grid-template-columns:1fr}
@@ -334,6 +337,7 @@
   </p>
 </div></footer>
 
+<!-- Footer year, then one-shot fade-in for .reveal. -->
 <script>
   document.getElementById('cpyear').textContent = new Date().getFullYear();
   var io = new IntersectionObserver(function(es){
@@ -345,6 +349,7 @@
     <button class="lightbox-close" type="button" aria-label="Close">&times;</button>
     <img id="lightboxImg" src="" alt="">
   </div>
+  <!-- Lightbox opens data-full (the webp). Escape or the backdrop closes it and returns focus. -->
   <script>(function(){
     var lb=document.getElementById('lightbox'),img=document.getElementById('lightboxImg'),last=null;
     function open(src,alt){img.src=src;img.alt=alt||'';lb.classList.add('open');document.body.style.overflow='hidden';}
